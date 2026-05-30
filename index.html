@@ -992,8 +992,6 @@ function tick(){
 /* ═══════════ CONTROLS ═══════════ */
 function doPlay(){
   initAudio();
-  /* iOS: voices는 사용자 인터랙션 직후에 로드됨 */
-  if(speechOK&&cachedVoices.length===0)loadVoices();
   running=!running;
   if(running){
     targetTime=Date.now()+1000;
